@@ -1,0 +1,2 @@
+#!/bin/bash
+R --vanilla < 01_extract_ipums.R > 01_extract_ipums.Rlog 2>&1

@@ -1,7 +1,8 @@
 # this will get the IPUMS extract
 Sys.getenv("IPUMS_API_KEY")
+# These are handled in "setup.R"
 #install.packages("ipumsr")
-remotes::install_github(  "ipums/ipumsr",   build_vignettes = FALSE,   dependencies = TRUE)
+#remotes::install_github(  "ipums/ipumsr",   build_vignettes = FALSE,   dependencies = TRUE)
 
 # See https://tech.popdata.org/ipumsr/dev/articles/ipums-api.html#sharing-an-extract-definition-1 for more details.
 library(ipumsr)

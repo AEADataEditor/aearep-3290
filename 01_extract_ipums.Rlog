@@ -1,0 +1,174 @@
+
+R version 4.2.0 (2022-04-22) -- "Vigorous Calisthenics"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # this will get the IPUMS extract
+> Sys.getenv("IPUMS_API_KEY")
+[1] "59cba10d8a5da536fc06b59de895532351ef4193a1a0da4352793f5e"
+> #install.packages("ipumsr")
+> remotes::install_github(  "ipums/ipumsr",   build_vignettes = FALSE,   dependencies = TRUE)
+Downloading GitHub repo ipums/ipumsr@HEAD
+triebeard (NA    -> 0.3.0   ) [CRAN]
+httpcode  (NA    -> 0.3.0   ) [CRAN]
+crul      (NA    -> 1.2.0   ) [CRAN]
+fauxpas   (NA    -> 0.5.0   ) [CRAN]
+urltools  (NA    -> 1.7.3   ) [CRAN]
+processx  (3.5.3 -> 3.6.0   ) [CRAN]
+wk        (NA    -> 0.6.0   ) [CRAN]
+proxy     (NA    -> 0.4-27  ) [CRAN]
+e1071     (NA    -> 1.7-11  ) [CRAN]
+webmockr  (NA    -> 0.8.0   ) [CRAN]
+units     (NA    -> 0.8-0   ) [CRAN]
+s2        (NA    -> 1.0.7   ) [CRAN]
+classInt  (NA    -> 0.4-7   ) [CRAN]
+sp        (NA    -> 1.5-0   ) [CRAN]
+crosstalk (NA    -> 1.2.0   ) [CRAN]
+terra     (NA    -> 1.5-34  ) [CRAN]
+BH        (NA    -> 1.78.0-0) [CRAN]
+vcr       (NA    -> 1.0.2   ) [CRAN]
+biglm     (NA    -> 0.9-2.1 ) [CRAN]
+sf        (NA    -> 1.0-7   ) [CRAN]
+rgdal     (NA    -> 1.5-32  ) [CRAN]
+DT        (NA    -> 0.23    ) [CRAN]
+zeallot   (NA    -> 0.1.0   ) [CRAN]
+raster    (NA    -> 3.5-15  ) [CRAN]
+hipread   (NA    -> 0.2.2   ) [CRAN]
+Installing 25 packages: triebeard, httpcode, crul, fauxpas, urltools, processx, wk, proxy, e1071, webmockr, units, s2, classInt, sp, crosstalk, terra, BH, vcr, biglm, sf, rgdal, DT, zeallot, raster, hipread
+Installing packages into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/triebeard_0.3.0.tar.gz'
+Content type 'application/x-gzip' length 27162 bytes (26 KB)
+==================================================
+downloaded 26 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/httpcode_0.3.0.tar.gz'
+Content type 'application/x-gzip' length 17821 bytes (17 KB)
+==================================================
+downloaded 17 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/crul_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 533713 bytes (521 KB)
+==================================================
+downloaded 521 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/fauxpas_0.5.0.tar.gz'
+Content type 'application/x-gzip' length 398005 bytes (388 KB)
+==================================================
+downloaded 388 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/urltools_1.7.3.tar.gz'
+Content type 'application/x-gzip' length 135778 bytes (132 KB)
+==================================================
+downloaded 132 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/processx_3.6.0.tar.gz'
+Content type 'application/x-gzip' length 148342 bytes (144 KB)
+==================================================
+downloaded 144 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/wk_0.6.0.tar.gz'
+Content type 'application/x-gzip' length 193841 bytes (189 KB)
+==================================================
+downloaded 189 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/proxy_0.4-27.tar.gz'
+Content type 'application/x-gzip' length 74622 bytes (72 KB)
+==================================================
+downloaded 72 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/e1071_1.7-11.tar.gz'
+Content type 'application/x-gzip' length 325494 bytes (317 KB)
+==================================================
+downloaded 317 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/webmockr_0.8.0.tar.gz'
+Content type 'application/x-gzip' length 91233 bytes (89 KB)
+==================================================
+downloaded 89 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/units_0.8-0.tar.gz'
+Content type 'application/x-gzip' length 866695 bytes (846 KB)
+==================================================
+downloaded 846 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/s2_1.0.7.tar.gz'
+Content type 'application/x-gzip' length 2235408 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/classInt_0.4-7.tar.gz'
+Content type 'application/x-gzip' length 437804 bytes (427 KB)
+==================================================
+downloaded 427 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/sp_1.5-0.tar.gz'
+Content type 'application/x-gzip' length 1033924 bytes (1009 KB)
+==================================================
+downloaded 1009 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/crosstalk_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 296495 bytes (289 KB)
+==================================================
+downloaded 289 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/terra_1.5-34.tar.gz'
+Content type 'application/x-gzip' length 667829 bytes (652 KB)
+==================================================
+downloaded 652 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/BH_1.78.0-0.tar.gz'
+Content type 'application/x-gzip' length 13269768 bytes (12.7 MB)
+==================================================
+downloaded 12.7 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/vcr_1.0.2.tar.gz'
+Content type 'application/x-gzip' length 2811430 bytes (2.7 MB)
+==================================================
+downloaded 2.7 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/biglm_0.9-2.1.tar.gz'
+Content type 'application/x-gzip' length 12513 bytes (12 KB)
+==================================================
+downloaded 12 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.0-7.tar.gz'
+Content type 'application/x-gzip' length 3529597 bytes (3.4 MB)
+==================================================
+downloaded 3.4 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/rgdal_1.5-32.tar.gz'
+Content type 'application/x-gzip' length 4469369 bytes (4.3 MB)
+==================================================
+downloaded 4.3 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/DT_0.23.tar.gz'
+Content type 'application/x-gzip' length 1470289 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/zeallot_0.1.0.tar.gz'
+Content type 'application/x-gzip' length 32549 bytes (31 KB)
+==================================================
+downloaded 31 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/raster_3.5-15.tar.gz'
+Content type 'application/x-gzip' length 580594 bytes (566 KB)
+==================================================
+downloaded 566 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/hipread_0.2.2.tar.gz'
